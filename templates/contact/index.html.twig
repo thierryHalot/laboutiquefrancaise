@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Nous contacter - La boutique française
+{% endblock %}
+{% block content %}
+	{% for message in app.flashes('notice') %}
+		<div class="alert alert-info">{{message}}</div>
+	{% endfor %}
+	<h2>Nous contacter</h2>
+	<p>N'hésitez pas à prendre contact avec notre équipe, nous vous répondrons dans les meilleurs délais.</p>
+	<div class="row">
+		<div class="col-md-8">
+			{{ form(form)}}
+		</div>
+		<div class="col-md-4">
+			<strong>La boutique Française</strong>
+			<hr>
+			06 20 30 40 50
+			<br>
+			8 rue de la boutique française, 34400 Lunel
+			<br>
+			contact@laboutiqueFrançaise.fr
+		</div>
+	</div>
+{% endblock %}
